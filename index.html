@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Neon Music Player</title>
+    <link rel="preconnect" href="https://images.unsplash.com" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#mainContent">Skip to main content</a>
+    <div class="background-glow"></div>
+
+    <div class="app-shell">
+      <aside class="sidebar glass-panel" aria-label="Sidebar navigation">
+        <div class="brand">
+          <div class="brand-dot" aria-hidden="true"></div>
+          <span>NeonWave</span>
+        </div>
+
+        <nav class="nav-links">
+          <a class="nav-link active" href="#" aria-current="page">Home</a>
+          <a class="nav-link" href="#">Library</a>
+          <a class="nav-link" href="#">Favorites</a>
+        </nav>
+      </aside>
+
+      <main id="mainContent" class="main-content" tabindex="-1">
+        <header class="main-header">
+          <p class="eyebrow">Trending</p>
+          <h1>Albums</h1>
+        </header>
+
+        <section class="albums-grid" role="listbox" aria-label="Trending albums selection">
+          <article class="album-card glass-panel is-selected" data-duration="223" tabindex="0" role="option" aria-label="Select album Starlight Echoes" aria-selected="true">
+            <img
+              src="https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=600&q=80"
+              alt="Starlight Echoes album cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <h2>Starlight Echoes</h2>
+          </article>
+
+          <article class="album-card glass-panel" data-duration="196" tabindex="0" role="option" aria-label="Select album Velvet Frequency" aria-selected="false">
+            <img
+              src="https://images.unsplash.com/photo-1461784121038-f088ca1e7714?auto=format&fit=crop&w=600&q=80"
+              alt="Velvet Frequency album cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <h2>Velvet Frequency</h2>
+          </article>
+
+          <article class="album-card glass-panel" data-duration="241" tabindex="0" role="option" aria-label="Select album Afterlight" aria-selected="false">
+            <img
+              src="https://images.unsplash.com/photo-1501386761578-eac5c94b800a?auto=format&fit=crop&w=600&q=80"
+              alt="Afterlight album cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <h2>Afterlight</h2>
+          </article>
+
+          <article class="album-card glass-panel" data-duration="215" tabindex="0" role="option" aria-label="Select album Night Drive" aria-selected="false">
+            <img
+              src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=600&q=80"
+              alt="Night Drive album cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <h2>Night Drive</h2>
+          </article>
+
+          <article class="album-card glass-panel" data-duration="204" tabindex="0" role="option" aria-label="Select album City Pulse" aria-selected="false">
+            <img
+              src="https://images.unsplash.com/photo-1514525253161-7a46d19cd819?auto=format&fit=crop&w=600&q=80"
+              alt="City Pulse album cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <h2>City Pulse</h2>
+          </article>
+
+          <article class="album-card glass-panel" data-duration="232" tabindex="0" role="option" aria-label="Select album Midnight Radio" aria-selected="false">
+            <img
+              src="https://images.unsplash.com/photo-1493225457124-a3eb161ffa5f?auto=format&fit=crop&w=600&q=80"
+              alt="Midnight Radio album cover"
+              loading="lazy"
+              decoding="async"
+            />
+            <h2>Midnight Radio</h2>
+          </article>
+        </section>
+      </main>
+    </div>
+
+    <footer class="player glass-panel" aria-label="Music player">
+      <button id="playPauseButton" class="play-button" type="button" aria-label="Play" aria-pressed="false">
+        <span id="playIcon" aria-hidden="true">&#9658;</span>
+      </button>
+
+      <div class="track-info">
+        <p class="track-title" id="trackTitle" aria-live="polite">Starlight Echoes</p>
+        <div class="equalizer" aria-hidden="true">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+
+      <div class="timeline">
+        <div class="progress-track" aria-label="Track progress" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-valuetext="0 percent played">
+          <div id="progressFill" class="progress-fill"></div>
+        </div>
+        <p class="time-indicator"><span id="currentTime" aria-live="off">00:00</span> / <span id="duration">03:35</span></p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
