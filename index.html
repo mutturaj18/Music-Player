@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Neon Music Player</title>
+    <title>Waveify Player</title>
     <link rel="preconnect" href="https://images.unsplash.com" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -21,7 +21,7 @@
       <aside class="sidebar glass-panel" aria-label="Sidebar navigation">
         <div class="brand">
           <div class="brand-dot" aria-hidden="true"></div>
-          <span>NeonWave</span>
+          <span>Waveify</span>
         </div>
 
         <nav class="nav-links">
@@ -32,9 +32,17 @@
       </aside>
 
       <main id="mainContent" class="main-content" tabindex="-1">
+        <section class="main-toolbar glass-panel" aria-label="Library controls">
+          <div>
+            <p class="toolbar-kicker">Good evening</p>
+            <p class="toolbar-title">Discover your next favorite track</p>
+          </div>
+          <button class="toolbar-button" type="button" aria-label="Explore new releases">New Releases</button>
+        </section>
+
         <header class="main-header">
           <p class="eyebrow">Trending</p>
-          <h1>Albums</h1>
+          <h1>Popular Albums</h1>
         </header>
 
         <section class="albums-grid" role="listbox" aria-label="Trending albums selection">

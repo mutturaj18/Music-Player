@@ -138,12 +138,17 @@ function handleCardKeydown(event, card) {
   }
 }
 
-albumCards.forEach((card) => {
-  card.addEventListener("click", () => setSelectedAlbum(card));
-  card.addEventListener("keydown", (event) => handleCardKeydown(event, card));
-});
+function initializePlayer() {
+  albumCards.forEach((card) => {
+    card.addEventListener("click", () => setSelectedAlbum(card));
+    card.addEventListener("keydown", (event) => handleCardKeydown(event, card));
+  });
 
-playPauseButton.addEventListener("click", togglePlayback);
+  playPauseButton.addEventListener("click", togglePlayback);
 
-setSelectedAlbum(albumCards.find((card) => card.classList.contains("is-selected")) || albumCards[0]);
-setPlaybackUiState(false);
+  const initiallySelectedCard = albumCards.find((card) => card.classList.contains("is-selected")) || albumCards[0];
+  setSelectedAlbum(initiallySelectedCard);
+  setPlaybackUiState(false);
+}
+
+initializePlayer();
